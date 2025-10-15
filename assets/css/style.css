@@ -1,0 +1,611 @@
+/* styles.css - Estilos Customizados para Mokko Café Case Study */
+
+/* Variáveis CSS para Paleta de Cores (Terrosa e Acolhedora) */
+:root {
+  --color-cream: #FAF7F2;
+  --color-dark-brown: #2C2419;
+  --color-medium-brown: #684423;
+  --color-tan: #D4A574;
+  --color-light-beige: #E8DFD3;
+  --color-green-soft: #C9D6B2;
+  --color-dark-green: #6B8E23;
+  --color-red-light: #FEE2E2; /* Para blocos de problema */
+}
+
+/* Reset e Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  line-height: 1.6;
+  color: var(--color-dark-brown);
+  background-color: var(--color-cream);
+}
+
+.titles {
+  font-family: 'Baloo 2', cursive;
+  color: var(--color-medium-brown);
+}
+
+.subtitles {
+  font-family: 'Baloo 2', cursive;
+  color: var(--color-medium-brown);
+}
+
+.small_title {
+  font-weight: 600;
+  color: var(--color-tan);
+}
+
+.highlight_text {
+  font-weight: bold;
+  color: var(--color-medium-brown);
+}
+
+.highlight_text_second {
+  font-weight: bold;
+  color: var(--color-tan);
+}
+
+/* Seções Gerais */
+.section_padding {
+  padding: 4rem 1rem;
+}
+
+.full_width_section {
+  width: 100%;
+}
+
+/* Header */
+.header_container {
+  background-color: white;
+}
+
+.header_logo {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.logo_caption {
+  font-style: italic;
+}
+
+/* Desafio Central */
+.desafio_card {
+  background: linear-gradient(to bottom, var(--color-cream), var(--color-light-beige));
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.desafio_text {
+  color: var(--color-dark-brown);
+}
+
+.missao_branding {
+  color: var(--color-medium-brown);
+  font-style: italic;
+}
+
+/* Personas Grid - Responsivo */
+.personas_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.persona_card {
+  background-color: var(--color-cream);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.persona_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.persona_image {
+  border: 3px solid var(--color-light-beige);
+}
+
+.design_quote {
+  background-color: var(--color-light-beige);
+  border-left: 4px solid var(--color-tan);
+}
+
+.persona_quote {
+  font-style: italic;
+  color: var(--color-medium-brown);
+  border-top: 1px solid var(--color-light-beige);
+  padding-top: 1rem;
+}
+
+/* Jornada do Cliente - Fluxo Responsivo */
+.journey-flow-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .journey-flow-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.journey-phase {
+  flex: 1;
+  position: relative;
+}
+
+.flow-line-desktop {
+  background-color: var(--color-light-beige);
+  height: 2px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.phase-circle {
+  background-color: var(--color-tan);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.phase-circle.bg-medium-brown {
+  background-color: var(--color-medium-brown);
+}
+
+.phase-circle.bg-green-soft {
+  background-color: var(--color-green-soft);
+}
+
+.phase-content-box {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Ambiência Gallery */
+.ambience_gallery_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ambience_gallery_grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.gallery_image {
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery_image:hover {
+  transform: scale(1.05);
+}
+
+.gallery_caption {
+  color: var(--color-medium-brown);
+  font-style: italic;
+}
+
+/* Content Grid Geral - Responsivo */
+.content_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .content_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.full_width_card {
+  grid-column: 1 / -1;
+}
+
+/* Sitemap e Tabela UX Writing */
+.sitemap_list {
+  border-color: var(--color-light-beige);
+}
+
+.sitemap_item {
+  border-bottom-color: var(--color-light-beige);
+  padding: 0.5rem 0;
+}
+
+.priority_tag {
+  background-color: var(--color-light-beige);
+  border-radius: 9999px;
+}
+
+.writing_table {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table_header, .table_cell {
+  text-align: left;
+}
+
+.generic_text {
+  color: var(--color-medium-brown);
+  font-style: italic;
+}
+
+.mokko_text {
+  color: var(--color-dark-green);
+  font-weight: bold;
+}
+
+/* Wireframes como Pequenos Apps - Responsivos e Interativos */
+.wireframe_showcase_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .wireframe_showcase_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.wireframe_example_box {
+  background-color: var(--color-light-beige);
+  border: 1px solid var(--color-light-beige);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  max-height: 24rem; /* Limite para "app-like" */
+  overflow: hidden;
+}
+
+.wireframe_example_box:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: scale(1.02);
+}
+
+.wireframe-ascii {
+  white-space: pre-line;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem; /* 14px base */
+  line-height: 1.2;
+  color: var(--color-dark-brown);
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--color-tan);
+  border-radius: 0.5rem;
+  background-color: var(--color-cream);
+}
+
+@media (max-width: 767px) {
+  .wireframe-ascii {
+    font-size: 0.75rem; /* Reduz em mobile para caber */
+    padding: 0.5rem;
+  }
+  
+  .wireframe_example_box {
+    max-height: 20rem;
+  }
+}
+
+.wireframe_caption {
+  color: var(--color-medium-brown);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Resizable Frame - Mini-App Interativo */
+/* Ponto de corte anterior: Aqui continua a media query */
+.responsive-app-container {
+  position: relative;
+}
+
+.resizable-frame {
+  transition: width 0.2s ease, height 0.2s ease;
+  background-color: var(--color-cream);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  min-width: 200px;
+  max-width: 800px;
+}
+
+.resize-handle {
+  cursor: col-resize;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.resize-handle:hover {
+  background-color: var(--color-tan) !important;
+}
+
+.resize-handle:focus-visible {
+  outline: 2px solid var(--color-medium-brown);
+  outline-offset: 2px;
+}
+
+.wireframe-content {
+  height: 100%;
+  padding: 0.5rem;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: var(--color-dark-brown);
+}
+
+.wireframe-header, .wireframe-block {
+  border-radius: 0.25rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-light-beige);
+  transition: background-color 0.3s ease;
+}
+
+.wireframe-block:hover {
+  background-color: var(--color-light-beige) !important;
+}
+
+.mobile-layout .wireframe-main-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.desktop-layout .wireframe-main-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Completado: Grid responsivo para desktop */
+  gap: 0.5rem;
+  height: calc(100% - 2rem); /* Ajusta altura para preencher o frame */
+}
+
+@media (max-width: 767px) {
+  .resizable-frame {
+    width: 100% !important; /* Força full-width em mobile para melhor usabilidade */
+    max-width: none;
+  }
+  
+  .wireframe-content {
+    font-size: 0.7rem; /* Reduz fonte em mobile */
+  }
+}
+
+/* UI Design - Paleta de Cores (Swatches como Mini-Apps) */
+.color_palette_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.color_swatch {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid var(--color-light-beige);
+}
+
+.color_swatch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.color_swatch .text-3xl {
+  font-size: 1.5rem; /* Ajuste para texto de teste de contraste */
+  line-height: 1;
+}
+
+/* WCAG Banner */
+.wcag_compliance_banner {
+  background-color: var(--color-medium-brown);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Iterações e Testes de Usabilidade */
+.iteration_block {
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.iteration_block:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.full_width_diagram {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Mockups de Produtos - Grid Responsivo */
+.product_mockup_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .product_mockup_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product_image {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product_image:hover {
+  transform: scale(1.05);
+}
+
+.product_caption {
+  color: var(--color-medium-brown);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+/* Entrega e Next Steps */
+.link_call_to_action {
+  color: var(--color-medium-brown);
+  font-weight: bold;
+}
+
+.link_final_project {
+  color: var(--color-tan);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.link_final_project:hover {
+  color: var(--color-medium-brown);
+}
+
+.innovation_detail {
+  color: var(--color-dark-brown);
+}
+
+/* Footer */
+.footer_container {
+  background-color: var(--color-medium-brown);
+  color: white;
+}
+
+.footer_title {
+  color: white;
+  font-family: 'Baloo 2', cursive;
+}
+
+.footer_quote {
+  color: var(--color-light-beige);
+  font-style: italic;
+}
+
+.footer_details {
+  color: var(--color-light-beige);
+  opacity: 0.8;
+}
+
+/* Responsividade Geral para Wireframes e Apps (Mobile-First) */
+@media (max-width: 767px) {
+  .section_padding {
+    padding: 2rem 1rem;
+  }
+  
+  .wireframe_showcase_grid,
+  .ambience_gallery_grid,
+  .product_mockup_grid,
+  .color_palette_grid {
+    grid-template-columns: 1fr; /* Stack vertical em mobile */
+  }
+  
+  .resizable-frame {
+    height: 400px; /* Reduz altura em mobile */
+  }
+  
+  /* Ajusta grids para stack em telas pequenas */
+  .content_grid,
+  .personas_grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .journey-flow-container {
+    gap: 1rem;
+  }
+  
+  .phase-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .phase-circle span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet: Grid parcial para wireframes */
+  .wireframe_showcase_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .resizable-frame {
+    width: 400px; /* Largura inicial maior em tablet */
+  }
+}
+
+/* Acessibilidade: Focus States e Contraste */
+*:focus-visible {
+  outline: 2px solid var(--color-tan);
+  outline-offset: 2px;
+}
+
+/* Garantia de contraste WCAG AA para textos */
+body,
+p,
+td {
+  /* Contraste mínimo 4.5:1 com --color-dark-brown em --color-cream */
+  color: var(--color-dark-brown);
+}
+
+.text-white {
+  color: white; /* Contraste com fundos escuros */
+}
+
+/* Animações Suaves para Transições de Layout (App-like) */
+@keyframes fadeInApp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.wireframe_example_box,
+.color_swatch,
+.iteration_block {
+  animation: fadeInApp 0.5s ease-out;
+}
+
+/* Scrollbar Customizada para Overflow em Apps (Opcional, para IE/Edge) */
+.wireframe-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.wireframe-content::-webkit-scrollbar-track {
+  background: var(--color-light-beige);
+  border-radius: 2px;
+}
+
+.wireframe-content::-webkit-scrollbar-thumb {
+  background: var(--color-tan);
+  border-radius: 2px;
+}
+
+.wireframe-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-medium-brown);
+}

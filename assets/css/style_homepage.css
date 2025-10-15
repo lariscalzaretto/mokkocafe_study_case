@@ -1,0 +1,284 @@
+/*
+    -------------------------------------------------
+    1. Base e Configurações Globais (Mobile-First)
+    -------------------------------------------------
+*/
+
+/* 1.1 Fontes: Carregar a fonte MokkoCafe */
+@font-face {
+    font-family: 'MokkoCafe';
+    src: url('../fonts/MokkoCafe-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Cores (Exemplo: paleta escura/aconchegante, adapte conforme a marca Mokko) */
+    --color-primary: #4A2C2A; /* Marrom escuro/café */
+    --color-secondary: #C3996B; /* Bege/Caramelo */
+    --color-light: #F7F5F0; /* Off-white/Papel */
+    --color-dark: #2C1B1B; /* Quase preto */
+
+    /* Espaçamento: O 'gap' da pausa, maior que o padrão */
+    --space-xl: 4rem;
+    --space-lg: 2.5rem;
+    --space-md: 1.5rem;
+    --space-sm: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fallback */
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+/* Títulos com a fonte da marca */
+h1, h2 {
+    font-family: 'MokkoCafe', cursive;
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+
+/*
+    -------------------------------------------------
+    2. Header Fixo (Mobile)
+    -------------------------------------------------
+*/
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Garante que fique por cima */
+}
+
+.main-header .logo img {
+    height: 60px; /* Tamanho do logo no mobile */
+}
+
+/* Estilo básico do botão de menu (hambúrguer) */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Adiciona um espaço no topo do conteúdo para evitar que o Header Fixo o cubra */
+body {
+    padding-top: 60px; /* Ajuste para o tamanho do header */
+}
+
+/*
+    -------------------------------------------------
+    3. Hero Section (Pausa & Imagem)
+    -------------------------------------------------
+*/
+
+.hero-section {
+    height: 60vh; /* Altura generosa no mobile */
+    background-image: url('../img/AMBIENCIA/banner.jpg'); /* Imagem Hero */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Alinha o texto no meio verticalmente */
+    justify-content: center;
+    color: var(--color-light);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Melhor contraste */
+    margin-bottom: var(--space-lg);
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo sutil para o texto */
+    padding: var(--space-md);
+    border-radius: 8px;
+}
+
+/*
+    -------------------------------------------------
+    4. CTA Section (Chamadas de Ação)
+    -------------------------------------------------
+*/
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md); /* Espaçamento entre os botões */
+    padding: 0 var(--space-md) var(--space-lg);
+}
+
+.cta-button {
+    display: block;
+    padding: var(--space-md);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.1rem;
+}
+
+.cta-button.primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: 2px solid var(--color-primary);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+/*
+    -------------------------------------------------
+    5. About Section (Nossa História)
+    -------------------------------------------------
+*/
+
+.about-section {
+    padding: var(--space-xl) var(--space-md); /* Espaçamento generoso para a "pausa" */
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 0 auto var(--space-md) auto;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.link-more {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*
+    -------------------------------------------------
+    6. Gallery Section (Visual Imersivo)
+    -------------------------------------------------
+*/
+
+.gallery-section {
+    padding-bottom: var(--space-xl);
+}
+
+.gallery-section h2 {
+    margin-bottom: var(--space-md);
+}
+
+.gallery-grid {
+    display: grid;
+    /* No mobile, uma coluna */
+    grid-template-columns: 1fr;
+    gap: 0; /* Sem gap para o visual imersivo no mobile */
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 40vh; /* Imagens altas no mobile */
+    object-fit: cover;
+    display: block;
+}
+
+/*
+    -------------------------------------------------
+    7. Footer
+    -------------------------------------------------
+*/
+
+.main-footer {
+    padding: var(--space-md);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*
+    =================================================
+    8. Media Query para Desktop (Telas Maiores)
+    =================================================
+*/
+
+@media (min-width: 768px) {
+    /* Ajustes Gerais para Desktop */
+    h1 { font-size: 4.5rem; }
+    h2 { font-size: 3.5rem; }
+    body { padding-top: 80px; } /* Ajuste o padding para o header maior */
+    
+    /* Header Desktop */
+    .main-header {
+        padding: var(--space-md) var(--space-lg);
+        /* No desktop, você teria a navegação completa em vez do botão de menu */
+    }
+    .main-header .logo img {
+        height: 50px;
+    }
+    .menu-toggle {
+        display: none; /* Esconde o menu hamburger */
+    }
+    /* Aqui entraria a navegação de desktop (Home Menu Hist Lojas Contato) */
+
+    /* Hero Section Desktop */
+    .hero-section {
+        height: 70vh;
+        margin-bottom: var(--space-xl);
+    }
+    
+    /* CTAs Desktop - Podem ficar lado a lado */
+    .cta-section {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto var(--space-xl);
+        padding: 0;
+    }
+    .cta-button {
+        width: 40%;
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+
+    /* About Section Desktop */
+    .about-section {
+        padding: var(--space-xl) var(--space-lg);
+    }
+    
+    /* Gallery Desktop - Grid com mais colunas */
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+        gap: var(--space-sm); /* Adiciona um gap */
+        padding: 0 var(--space-lg);
+    }
+    .gallery-grid img {
+        height: 300px; /* Altura mais razoável para desktop */
+    }
+}

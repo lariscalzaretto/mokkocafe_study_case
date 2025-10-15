@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study UX/UI: Mokko Café</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="antialiased font-sans">
+
+    <header class="header_container text-center py-12 md:py-20 bg-white shadow-lg">
+        <figure class="logo_container inline-block mb-4">
+            <img src="../assets/img/LOGOTIPOS/3.png" alt="Logo Mokko Café com o mascote coelho Mokko" class="header_logo w-24 h-24 mx-auto">
+            <figcaption class="logo_caption text-xs mt-1 text-gray-500">Mokko, o Guardião da Pausa.</figcaption>
+        </figure>
+        <h1 class="titles header_title text-4xl md:text-6xl mb-2 font-bold">Mokko Café</h1>
+        <h2 class="subtitles header_subtitle text-xl md:text-2xl font-semibold mb-4">Case Study UX/UI Design</h2>
+        <p class="header_description text-gray-600 max-w-2xl mx-auto">Projeto fictício da criação de uma cafeteria com alma coreana, baseada na filosofia do <i>Slow Living</i>.</p>
+        <p class="header_roles mt-4 text-sm font-medium small_title">por Larissa S. Corrêa | UX/UI Designer · UX Writer · UX Researcher · Estrategista de Branding</p>
+    </header>
+
+    <section id="desafio_central" class="section_padding max-w-5xl mx-auto">
+        <article class="desafio_card text-center">
+            <h3 class="small_title text-2xl font-bold mb-4">O Desafio Central </h3>
+            <p class="desafio_text text-lg md:text-xl font-medium max-w-4xl mx-auto">Como criar uma experiência digital que reflita os valores do slow living e permita que os clientes do Mokko Café encontrem um espaço de calma e autenticidade, enquanto facilitam a descoberta de produtos artesanais e a reserva de experiências únicas?</p>
+            <p class="missao_branding mt-4 text-sm font-semibold">Missão (Porquê): "Porque todos precisam de um lugar para respirar."</p>
+        </article>
+    </section>
+
+    <main class="main_container max-w-7xl mx-auto">
+        
+        <section id="ux_research" class="section_padding">
+            <h3 class="small_title section_subtitle">Fase 1: UX Research</h3>
+            <h1 class="titles section_title text-4xl font-bold mb-8">Personas</h1>
+            <p class="section_description text-xl max-w-3xl mb-12">Conheça os três perfis de usuários que moldaram todas as decisões de design, com foco em inclusão e acessibilidade.</p>
+
+            <div class="personas_grid grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="persona_1" class="persona_card text-center p-6 rounded-lg shadow-md">
+                    <figure class="persona_photo_container mb-4">
+                        <img src="../assets/img/persona/persona-1.jpg" alt="Foto de Sofia, a Designer Saturada" class="persona_image w-32 h-32 rounded-full mx-auto object-cover">
+                    </figure>
+                    <h2 class="subtitles persona_name text-2xl font-bold">Sofia</h2>
+                    <h3 class="small_title persona_role text-lg font-medium mb-4">A Designer Saturada</h3>
+                    <p class="persona_age_city text-sm text-gray-500 mb-4">33 anos, Designer Gráfica Freelancer</p>
+                    
+                    <div class="text-left space-y-3">
+                        <p><span class="highlight_text">Objetivo:</span> Encontrar um lugar tranquilo para trabalhar em projetos pessoais.</p>
+                        <p><span class="highlight_text_second">Dor:</span> Se sente sobrecarregada por notificações e ambientes barulhentos.</p>
+                        <article class="design_quote p-2 rounded mt-4">
+                            <p class="highlight_text mb-1">Influência no Design</p>
+                            <p class="text-sm">O UX Writing deve ser calmante. Design Mobile-First é crucial. Grande ênfase na Galeria.</p>
+                        </article>
+                        <article class="persona_quote">
+                            <q class="quote_text">"Eu preciso de um lugar que me lembre que está tudo bem desacelerar."-Sofia</q>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="persona_2" class="persona_card text-center p-6 rounded-lg shadow-md">
+                    <figure class="personas_photo_container mb-4">
+                        <img src="../assets/img/persona/persona-2.jpg" alt="Foto de Leo, o Entusiasta Cultural" class="persona_image w-32 h-32 rounded-full mx-auto object-cover">
+                    </figure>
+                    <h2 class="subtitles persona_name text-2xl font-bold">Leo</h2>
+                    <h3 class="small_title persona_role text-lg font-medium mb-4">O Entusiasta Cultural</h3>
+                    <p class="persona_age_city text-sm text-gray-500 mb-4">22 anos, Fã de K-Culture</p>
+                    
+                    <div class="text-left space-y-3">
+                        <p><span class="highlight_text">Objetivo:</span> Imersão Cultural e ponto de encontro para a comunidade K-Culture.</p>
+                        <p><span class="highlight_text_second">Dor:</span> Cafeterias temáticas superficiais. Cansaço de locais barulhentos.</p>
+                        <article class="design_quote p-2 rounded mt-4">
+                            <p class="highlight_text mb-1">Influência no Design</p>
+                            <p class="text-sm">Menu detalhado e seção 'Eventos' crucial. A promessa de 'refúgio suave' é um diferencial de qualidade.</p>
+                        </article>
+                        <article class="persona_quote">
+                            <q class="quote_text">"Eu quero encontrar o melhor 'Dalgona' da cidade e um lugar legal para encontrar meus amigos sem ter que gritar."-Leo</q>
+                        </article>
+                    </div>
+                </div>
+
+                <div id="persona_3" class="persona_card text-center p-6 rounded-lg shadow-md">
+                    <figure class="persona_photo_container mb-4">
+                        <img src="../assets/img/persona/persona-3.jpg" alt="Foto de Helena, a Conhecedora de Qualidade" class="persona_image w-32 h-32 rounded-full mx-auto object-cover">
+                    </figure>
+                    <h2 class="subtitles persona_name text-2xl font-bold">Helena</h2>
+                    <h3 class="small_title persona_role text-lg font-medium mb-4">A Conhecedora de Qualidade</h3>
+                    <p class="persona_age_city text-sm text-gray-500 mb-4">60 anos, Professora Aposentada</p>
+                    
+                    <div class="text-left space-y-3">
+                        <p><span class="highlight_text">Objetivo:</span> Encontrar um café com ambiente acolhedor, informações claras e acessibilidade física.</p>
+                        <p><span class="highlight_text_second">Dor:</span> Sites com letras pequenas, baixo contraste ou interfaces que a fazem se sentir 'perdida'.</p>
+                        <article class="design_quote p-2 rounded mt-4">
+                            <p class="highlight_text mb-1">Influência no Design</p>
+                            <p class="text-sm">Foco total em WCAG AA (Contraste) e UX Writing claro. O Design Responsivo deve ser excelente em telas maiores.</p>
+                        </article>
+                        <article class="persona_quote">
+                            <q class="quote_text">"Se eu não consigo ler o site, como vou confiar no atendimento do lugar?"-Helena</q>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada_cliente" class="section_padding bg-white">
+            <h1 class="titles section_title text-4xl font-bold mb-4 text-center">Jornada do Cliente</h1>
+            <p class="section_description text-lg max-w-4xl mx-auto mb-12 text-center">Mapeamento visual dos Pain Points em Oportunidades de Design, provando a necessidade de cada decisão de UX.</p>
+            
+            <div class="journey-flow-container max-w-6xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                
+                <div class="journey-phase flex-1 text-center">
+                    <div class="flow-line-desktop hidden md:block w-full h-1 mb-4"></div>
+                    <div class="phase-circle inline-block p-4 rounded-full mx-auto mb-4">
+                        <span class="text-3xl">🔍</span>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-bold text-lg mb-1">1. Descoberta</h4>
+                        <p class="text-sm">Sentimento: Curiosidade</p>
+                    </div>
+                    <div class="phase-content-box border border-red-400 p-2 mt-2 rounded">
+                        <p class="font-semibold text-xs">DOR: Site é lento/agressivo (Sofia)</p>
+                    </div>
+                    <div class="phase-content-box border-t border-green-500 p-2 mt-2 rounded-b">
+                        <p class="font-semibold text-xs text-green-700">SOLUÇÃO UX: Carregamento rápido + UX Writing Acolhedor.</p>
+                    </div>
+                </div>
+                
+                <div class="journey-phase flex-1 text-center">
+                    <div class="flow-line-desktop hidden md:block w-full h-1 mb-4"></div>
+                    <div class="phase-circle inline-block p-4 rounded-full mx-auto mb-4 bg-medium-brown">
+                        <span class="text-3xl text-white">🧐</span>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-bold text-lg mb-1">2. Avaliação</h4>
+                        <p class="text-sm">Sentimento: Frustração</p>
+                    </div>
+                    <div class="phase-content-box border border-red-400 p-2 mt-2 rounded">
+                        <p class="font-semibold text-xs">DOR: Menu e info críticas estão escondidas (Leo/Helena)</p>
+                    </div>
+                    <div class="phase-content-box border-t border-green-500 p-2 mt-2 rounded-b">
+                        <p class="font-semibold text-xs text-green-700">SOLUÇÃO UX: AI clara e Menu visível no Header/Footer.</p>
+                    </div>
+                </div>
+                
+                <div class="journey-phase flex-1 text-center">
+                    <div class="flow-line-desktop hidden md:block w-full h-1 mb-4"></div>
+                    <div class="phase-circle inline-block p-4 rounded-full mx-auto mb-4 bg-green-soft">
+                        <span class="text-3xl">✅</span>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="font-bold text-lg mb-1">3. Decisão</h4>
+                        <p class="text-sm">Sentimento: Confiança</p>
+                    </div>
+                    <div class="phase-content-box border border-red-400 p-2 mt-2 rounded">
+                        <p class="font-semibold text-xs">DOR: Baixo contraste/falta de Acessibilidade (Helena)</p>
+                    </div>
+                    <div class="phase-content-box border-t border-green-500 p-2 mt-2 rounded-b">
+                        <p class="font-semibold text-xs text-green-700">SOLUÇÃO UX: WCAG AA, Fontes Grandes e Contato em Destaque.</p>
+                    </div>
+                </div>
+            </div>
+            <figcaption class="diagram_caption text-xs text-center text-gray-500">Mapeamento visual dos Pain Points em Oportunidades de Design.</figcaption>
+        </section>
+        
+        <section id="ambiencia_espaco" class="section_padding full_width_section bg-white/50">
+            <h1 class="titles section_title text-4xl font-bold mb-4 text-center">O Refúgio Urbano: Ambiência (Branding e Propósito)</h1>
+            <p class="section_description text-lg max-w-4xl mx-auto mb-12 text-center">A atmosfera de floresta urbana com jardim interno e luz filtrada é a promessa de valor que o site deve traduzir. Isso guia a escolha de fotos e o UI Design.</p>
+            
+            <div class="ambience_gallery_grid max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <figure class="ambience_figure large_image">
+                    <img src="../assets/img/AMBIENCIA/Image_fx (3).jpg" alt="Interior do café com luz filtrada, plantas e decoração suave." class="gallery_image w-full rounded-lg shadow-md">
+                    <figcaption class="gallery_caption text-sm text-center mt-2">Ambiência: Luz Filtrada e Madeira para o Aconchego.</figcaption>
+                </figure>
+                <figure class="ambience_figure small_image">
+                    <img src="../assets/img/AMBIENCIA/Image_fx (10).jpg" alt="Detalhe da decoração que remete à cultura coreana." class="gallery_image w-full rounded-lg shadow-md">
+                    <figcaption class="gallery_caption text-sm text-center mt-2">Detalhe: A Essência Coreana.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="arquitetura_conteudo" class="section_padding">
+            <h3 class="small_title section_subtitle">Fase 2: Arquitetura e Conteúdo</h3>
+            <h1 class="titles section_title text-4xl font-bold mb-8 text-center">Arquitetura da Informação & UX Writing</h1>
+            
+            <div class="content_grid max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <article class="architecture_card p-6 rounded-lg shadow-md">
+                    <h2 class="subtitles text-2xl font-semibold mb-4">Arquitetura da Informação (Tópico 5)</h2>
+                    <p class="section_description text-gray-600 mb-6">O Sitemap, priorizado por utilidade e emoção, garante que as informações essenciais sejam encontradas com 1-2 cliques.</p>
+                    
+                    <div class="sitemap_list space-y-3">
+                        <div class="sitemap_item border-b pb-2">
+                            <span class="highlight_text text-lg">1. Home</span> <span class="priority_tag tag_alta bg-green-200 text-green-800 text-xs px-2 py-0.5 rounded-full ml-2 font-medium">Alta</span>
+                            <p class="sitemap_detail text-sm text-gray-500">Ponto de entrada emocional e imersão visual (Sofia).</p>
+                        </div>
+                        <div class="sitemap_item border-b pb-2">
+                            <span class="highlight_text text-lg">2. Menu</span> <span class="priority_tag tag_critica bg-red-200 text-red-800 text-xs px-2 py-0.5 rounded-full ml-2 font-medium">Crítica</span>
+                            <p class="sitemap_detail text-sm text-gray-500">Prioridade máxima (Leo e Helena). Deve ser navegável e filtrável.</p>
+                        </div>
+                        <div class="sitemap_item border-b pb-2">
+                            <span class="highlight_text text-lg">3. Nossa História</span> <span class="priority_tag tag_alta bg-green-200 text-green-800 text-xs px-2 py-0.5 rounded-full ml-2 font-medium">Alta</span>
+                            <p class="sitemap_detail text-sm text-gray-500">Conexão emocional e prova de autenticidade (Sofia e Helena).</p>
+                        </div>
+                        <div class="sitemap_item pb-2">
+                            <span class="highlight_text text-lg">4. Localização & Contato</span> <span class="priority_tag tag_alta bg-green-200 text-green-800 text-xs px-2 py-0.5 rounded-full ml-2 font-medium">Alta</span>
+                            <p class="sitemap_detail text-sm text-gray-500">Essencial. Inclui Mapa, Horários e Acessibilidade Física.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ux_writing_card p-6 rounded-lg shadow-md">
+                    <h2 class="subtitles text-2xl font-semibold mb-4">UX Writing: Voz da Marca</h2>
+                    <p class="section_description text-gray-600 mb-6">A voz é Calma e Afetuosa como um amigo sensível. O microcopy foi reescrito para transmitir afeto e evitar urgência.</p>
+
+                    <table class="writing_table w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="table_header p-2 border border-gray-300">Contexto</th>
+                                <th class="table_header p-2 border border-gray-300">Abordagem Genérica</th>
+                                <th class="table_header p-2 border border-gray-300">Voz Mokko Café</th>
+                                                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table_cell p-2 border border-gray-300">CTA de Produtos</td>
+                                <td class="table_cell generic_text p-2 border border-gray-300">Compre Agora</td>
+                                <td class="table_cell mokko_text p-2 border border-gray-300">Encontre Sua Pausa</td>
+                            </tr>
+                            <tr>
+                                <td class="table_cell p-2 border border-gray-300">Empty State</td>
+                                <td class="table_cell generic_text p-2 border border-gray-300">Carrinho Vazio</td>
+                                <td class="table_cell mokko_text p-2 border border-gray-300">Seu momento de calma começa aqui</td>
+                            </tr>
+                            <tr>
+                                <td class="table_cell p-2 border border-gray-300">Mensagem de Erro</td>
+                                <td class="table_cell generic_text p-2 border border-gray-300">Página Não Encontrada</td>
+                                <td class="table_cell mokko_text p-2 border border-gray-300">O Mokko se perdeu. Volte para o refúgio seguro.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                    <article class="wireframes_card col-span-1 lg:col-span-2 p-6 md:p-10 rounded-xl shadow-2xl bg-white border border-gray-100 transition duration-300 hover:shadow-3xl">
+    
+    <header class="mb-8">
+        <h2 class="subtitles text-3xl font-serif font-bold mb-2 text-center text-gray-800">
+            O Esboço da Experiência <span class="text-xl font-sans font-light text-gray-500"></span>
+        </h2>
+        <p class="section_description text-lg text-gray-600 max-w-2xl mx-auto text-center">
+            Wireframes em baixa fidelidade, focados em Mobile-First. O layout enfatiza o espaçamento para reforçar a sensação de "pausa". Agora exibidos como mini-apps responsivos.
+        </p>
+    </header>
+    
+    <div class="wireframe_showcase_grid grid grid-cols-1 xl:grid-cols-2 gap-8">
+        
+        <figure class="wireframe_example_box p-6 rounded-2xl shadow-xl bg-gray-50 border border-gray-200 flex flex-col transition duration-300 hover:shadow-2xl">
+            <h3 class="text-base font-semibold mb-3 text-left text-gray-700">Mobile - Home (Pausa & CTA)</h3>
+            
+            <div class="wireframe-ascii flex-grow overflow-hidden max-h-96 border border-gray-300 rounded-lg bg-gray-900 text-green-400 p-4 shadow-inner" 
+                 style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 10px; line-height: 1.3; overflow-y: auto;">
+                
+                <pre class="m-0 whitespace-pre-wrap">
+                    &lt;!-- MOBILE HOME --&gt;
+                    +---------------------+
+                    | [LOGO Mokko] [Menu] | &lt;-- Header Fixo
+                    |---------------------|
+                    |     [IMAGEM HERO]   |
+                    |     "Encontre sua   |
+                    |       Pausa."       |
+                    |---------------------|
+                    |   [CTA: Nossas Lojas]| &lt;-- CTA Fixo
+                    |   [CTA: Peça Online] |
+                    |---------------------|
+                    |                     |
+                    |    [SEÇÃO SOBRE]    |
+                    |  "Nossa História"   |
+                    |                     |
+                    |---------------------|
+                    |                     |
+                    |   [GALERIA FOTOS]   |
+                    |  (Visual Imersivo)  |
+                    |                     |
+                    +---------------------+
+                    &lt;-- Scroll --&gt;</pre>
+            </div>
+            
+            <figcaption class="wireframe_caption text-sm text-gray-500 mt-4 text-left">
+                **Descrição:** Layout mobile-first, focado em imagens e com CTA de localização/reserva fixo no Header.
+            </figcaption>
+        </figure>
+
+        <figure class="wireframe_example_box p-6 rounded-2xl shadow-xl bg-gray-50 border border-gray-200 flex flex-col transition duration-300 hover:shadow-2xl">
+            <h3 class="text-base font-semibold mb-3 text-left text-gray-700">Desktop - Menu (Grid Otimizado)</h3>
+
+            <div class="wireframe-ascii flex-grow overflow-hidden max-h-96 border border-gray-300 rounded-lg bg-gray-900 text-green-400 p-4 shadow-inner" 
+                 style="font-family: 'Fira Code', 'Courier New', monospace; font-size: 9px; line-height: 1.3; overflow-y: auto;">
+                
+                <pre class="m-0 whitespace-pre-wrap">
+                    &lt;!-- DESKTOP MENU --&gt;
+                    +-----------------------------------------------------+
+                    | [LOGO] Home Menu Hist Lojas Contato                 |
+                    |-----------------------------------------------------|
+                    |                                                   |
+                    | [FILTROS] (Sidebar)                                 |
+                    |  [Cafés]        +-------------------+ +-------------------+
+                    |  [Chás]        | [IMAGEM PRODUTO]  | | [IMAGEM PRODUTO]  |
+                    |  [Doces]       | Título do Produto | | Título do Produto |
+                    |  [Salgados]    | Descrição breve   | | Descrição breve   |
+                    |                | Preço             | | Preço             |
+                    |                +-------------------+ +-------------------+
+                    |                                                   |
+                    |                +-------------------+ +-------------------+
+                    |                | [IMAGEM PRODUTO]  | | [IMAGEM PRODUTO]  |
+                    |                | Título do Produto | | Título do Produto |
+                    |                | Descrição breve   | | Descrição breve   |
+                    |                | Preço             | | Preço             |
+                    |                +-------------------+ +-------------------+
+                    +-----------------------------------------------------+</pre>
+                </div>
+
+            <figcaption class="wireframe_caption text-sm text-gray-500 mt-4 text-left">
+                **Descrição:** Layout desktop com navegação completa, sidebar de filtros e grid de produtos otimizado para telas maiores.
+            </figcaption>
+        </figure>
+    </div>
+    </article>
+
+            </div>
+        </section>
+
+        <section id="ui_validacao" class="section_padding bg-white">
+            <h3 class="small_title section_subtitle">Fase 3: UI Design e Validação</h3>
+            <h1 class="titles section_title text-4xl font-bold mb-8 text-center">Design Inclusivo e Iterações</h1>
+
+            <div class="content_grid max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <article class="ui_design_card p-6 rounded-lg shadow-md">
+                    <h3 class="subtitles text-2xl font-semibold mb-4">UI Design</h3>
+                    <h2 class="titles text-3xl font-bold mb-4">Paleta & Acessibilidade (WCAG)</h2>
+                    
+                    <div class="wcag_compliance_banner text-center p-3 rounded-lg font-bold mb-6" style="background-color: var(--color-medium-brown); color: white;">
+                        ✅ WCAG 2.1 AA Conformidade
+                    </div>
+                    
+                    <p class="section_description text-gray-600 mb-6">A paleta terrosa foi aplicada priorizando a leitura. A combinação de Fundo (Cream) e Texto (Dark Brown) garante o Contraste WCAG 2.1 AA (relação 4.5:1), crucial para a Persona Helena (60 anos).</p>
+                    
+                    <div class="color_palette_grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 text-center">
+                        
+                        <div class="color_swatch p-3 rounded-lg" style="background-color: var(--color-cream); border: 1px solid var(--color-light-beige);">
+                            <div class="text-3xl font-bold mb-1" style="color: var(--color-medium-brown);">Aa</div>
+                            <p class="font-semibold text-sm">Cream</p>
+                            <p class="text-xs text-gray-600">#FAF7F2</p>
+                            <p class="text-xs mt-1">Fundo principal.</p>
+                        </div>
+
+                        <div class="color_swatch p-3 rounded-lg" style="background-color: var(--color-dark-brown);">
+                            <div class="text-3xl font-bold mb-1" style="color: white;">Aa</div>
+                            <p class="font-semibold text-sm text-white">Dark Brown</p>
+                            <p class="text-xs text-gray-300">#2C2419</p>
+                            <p class="text-xs mt-1 text-gray-300">Texto Principal. WCAG OK.</p>
+                        </div>
+
+                        <div class="color_swatch p-3 rounded-lg" style="background-color: var(--color-medium-brown);">
+                            <div class="text-3xl font-bold mb-1" style="color: white;">Aa</div>
+                            <p class="font-semibold text-sm text-white">Medium Brown</p>
+                            <p class="text-xs text-gray-300">#684423</p>
+                            <p class="text-xs mt-1 text-gray-300">Títulos e destaques.</p>
+                        </div>
+
+                        <div class="color_swatch p-3 rounded-lg" style="background-color: var(--color-tan);">
+                            <div class="text-3xl font-bold mb-1" style="color: var(--color-dark-brown);">Aa</div>
+                            <p class="font-semibold text-sm">Tan</p>
+                            <p class="text-xs text-gray-600">#D4A574</p>
+                            <p class="text-xs mt-1">Botões e acentos suaves.</p>
+                        </div>
+
+                        <div class="color_swatch p-3 rounded-lg" style="background-color: var(--color-light-beige);">
+                            <div class="text-3xl font-bold mb-1" style="color: var(--color-medium-brown);">Aa</div>
+                            <p class="font-semibold text-sm">Light Beige</p>
+                            <p class="text-xs text-gray-600">#E8DFD3</p>
+                            <p class="text-xs mt-1">Divisores e fundos de card secundários.</p>
+                        </div>
+
+                        <div class="color_swatch p-3 rounded-lg" style="background-color: var(--color-green-soft);">
+                            <div class="text-3xl font-bold mb-1" style="color: var(--color-dark-brown);">Aa</div>
+                            <p class="font-semibold text-sm">Green Soft</p>
+                            <p class="text-xs text-gray-600">#C9D6B2</p>
+                            <p class="text-xs mt-1">Elemento de "Floresta Urbana".</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <h2 class="subtitles mt-6 text-2xl font-semibold">Hierarquia Tipográfica</h2>
+                     <p class="section_description text-gray-600">Uso de sans-serif legível (mínimo 16px, line-height 1.6) para o corpo de texto, priorizando o conforto visual.</p>
+                </article>
+
+                <article class="teste_usabilidade_card p-6 rounded-lg shadow-md col-span-1 lg:col-span-2">
+                    <h3 class="subtitles text-2xl font-semibold mb-4">Teste de Usabilidade & Iteração</h3>
+                    <p class="section_description text-gray-600 mb-6">A validação com usuários (Teste de Fogo) comprovou o design e guiou os ajustes, mostrando o processo iterativo.</p>
+
+                    <div class="space-y-4">
+                        <div class="iteration_block p-3 rounded-lg" style="background-color: var(--color-red-light);">
+                            <p class="highlight_text_second text-xs font-bold text-red-600">❌ PROBLEMA (Leo/Helena)</p>
+                            <p class="problem_detail text-sm mt-1">Usuários não viam o horário de funcionamento fixo no rodapé (Mobile).</p>
+                        </div>
+                        <div class="iteration_block p-3 rounded-lg" style="background-color: var(--color-green-soft);">
+                            <p class="highlight_text text-xs font-bold text-green-800">✅ SOLUÇÃO APLICADA</p>
+                            <p class="solution_detail text-sm mt-1">Movemos o horário de funcionamento para a barra fixa no Header em Mobile, reduzindo o atrito e aumentando a eficiência.</p>
+                        </div>
+                    </div>
+                    
+                    <figure class="mockup_final_figure mt-8">
+                        <img src="../assets/img/MOCKUPS/homepage.png" alt="Mockup final da Home Page." class="full_width_diagram w-full rounded-lg shadow-md">
+                        <figcaption class="diagram_caption text-xs text-center text-gray-500 mt-2">Resultado: Mockup final da Home Page validado após iteração.</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+        
+         <section id="mockups_produtos" class="section_padding full_width_section bg-white/50">
+             <h1 class="titles section_title text-4xl font-bold mb-8 text-center">Branding Aplicado: Mockups e Produtos</h1>
+            <p class="section_description text-lg max-w-4xl mx-auto mb-12 text-center">O Branding se estende ao mundo físico. Estes mockups mostram como a identidade visual é aplicada em produtos, reforçando a promessa de "afeto" e "slow living" para levar para casa.</p>
+            
+            <div class="product_mockup_grid max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <figure class="product_figure">
+                    <img src="../assets/img/EMBALAGENS/Image_fx (1) copiar 2.png" alt="Mockup da embalagem de café ou chá Mokko Café." class="product_image w-full rounded-lg shadow-md">
+                    <figcaption class="product_caption text-sm text-center mt-2">Embalagens: Textura e cores suaves.</figcaption>
+                </figure>
+                <figure class="product_figure">
+                    <img src="../assets/img/EMBALAGENS/Image_fx (3) copiar 2.png" alt="Mockup de embalagem de papel da Mokko Café." class="product_image w-full rounded-lg shadow-md">
+                    <figcaption class="product_caption text-sm text-center mt-2">Embalagem: O mascote Mokko no produto.</figcaption>
+                </figure>
+                <figure class="product_figure">
+                    <img src="../assets/img/EMBALAGENS/Image_fx (7) copiar.png" alt="Mockup de cardápio da Mokko Café." class="product_image w-full rounded-lg shadow-md">
+                    <figcaption class="product_caption text-sm text-center mt-2">Material Gráfico: Aplicando a tipografia artesanal.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="conclusao_entrega" class="section_padding bg-white">
+            <h3 class="small_title section_subtitle">Fase 4: Conclusão e Entrega</h3>
+            <h1 class="titles section_title text-4xl font-bold mb-8 text-center">O Produto Final e Próximos Passos (Tópicos 9 e 10)</h1>
+            
+            <div class="content_grid max-w-7xl mx-auto grid grid-cols-1 gap-8">
+                <article class="entrega_card full_width_card p-6 rounded-lg shadow-md text-center">
+                    <h3 class="subtitles text-2xl font-semibold mb-4">Entrega Funcional</h3>
+                    <p class="section_description text-gray-600 mb-6">O design validado foi transformado em um site responsivo funcional utilizando HTML, CSS e JavaScript. A construção em código valida a responsividade e a acessibilidade do projeto.</p>
+                    
+                    <div class="p-6 rounded-lg text-center" style="background-color: var(--color-light-beige);">
+                        <p class="highlight_text link_call_to_action text-lg mb-2">VEJA A SOLUÇÃO EM AÇÃO (GitHub Pages)</p>
+                        <div class="link_highlight_box">
+                            <p class="highlight_text link_call_to_action">VEJA A SOLUÇÃO EM AÇÃO (GitHub Pages)</p>
+                            <a href="homepage.html" target="_blank" class="link_final_project text-blue-600 underline font-semibold break-all">Acesse o Protótipo Final do Mokko Café (Link Funcional)</a>
+                        </div>                    
+                    </div>
+                </article>
+
+                <article class="next_steps_card full_width_card p-6 rounded-lg shadow-md">
+                    <h3 class="subtitles text-2xl font-semibold mb-4">Responsividade em Ação: Mobile para Desktop</h3>
+                    <p class="section_description text-gray-600 mb-6">Arraste a borda direita do wireframe abaixo para visualizar como o layout se adapta de um dispositivo mobile para um desktop, otimizando a experiência do usuário em diferentes telas. (Mini-app interativo)</p>
+                    
+                    <div class="responsive-app-container relative mx-auto max-w-4xl">
+                        <div id="resizableFrame" class="resizable-frame border-2 border-gray-300 rounded-lg shadow-lg overflow-hidden cursor-col-resize" style="width: 300px; height: 500px; background: var(--color-cream); position: relative;">
+                            <div class="resize-handle absolute right-0 top-0 bottom-0 w-2 bg-gray-400 hover:bg-gray-500 transition-colors" style="cursor: col-resize; z-index: 10;"></div>
+                            <div class="wireframe-content p-2 text-xs font-mono h-full overflow-y-auto" id="wireframeContent">
+                                <div class="wireframe-header bg-medium-brown text-white p-2 mb-2 rounded"> [LOGO] Mokko | [MENU] </div>
+                                <div class="wireframe-main-area space-y-2">
+                                    <div class="wireframe-block bg-light-beige p-2 rounded"> [IMAGEM HERO] </div>
+                                    <div class="wireframe-block bg-tan p-2 rounded">
+                                                                        <div class="wireframe-block bg-tan p-2 rounded"> [CTA 1: Nossas Lojas] </div>
+                                    <div class="wireframe-block bg-tan p-2 rounded"> [CTA 2: Peça Online] </div>
+                                    <div class="wireframe-block bg-light-beige p-2 rounded"> [TEXTO SOBRE: Nossa História] </div>
+                                    <div class="wireframe-block bg-green-soft p-2 rounded"> [GALERIA: Fotos Imersivas] </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2 text-center">Largura atual: <span id="currentWidth">300</span>px | Arraste o handle direito para redimensionar (simula mobile → desktop).</p>
+                    </div>
+
+                    <p class="text-sm text-gray-600 mt-4">Essa demonstração interativa evidencia a aplicação de princípios de design responsivo, garantindo que o conteúdo do Mokko Café seja acessível e funcional em qualquer tamanho de tela. Em larguras <500px, o layout é mobile (stack vertical); acima, vira desktop (grid horizontal).</p>
+                </article>
+
+                <article class="next_steps_card full_width_card p-6 rounded-lg shadow-md">
+                    <h3 class="subtitles text-2xl font-semibold mb-4">Próximos Passos e Inovação</h3>
+                    <p class="section_description text-gray-600 mb-6">O planejamento inclui um passo futuro crucial para complementar a experiência de UX:</p>
+                    <div class="p-4 rounded-lg" style="border-left: 4px solid var(--color-tan); background-color: var(--color-cream);">
+                        <h4 class="highlight_text text-lg font-bold">Integração de Chatbot (n8n)</h4>
+                        <p class="innovation_detail text-sm mt-1">O Chatbot forneceria respostas objetivas e rápidas (Leo/Helena) a dúvidas frequentes, mantendo o site principal focado na imersão e Slow Living (Sofia). Isso prova a visão de automação e eficiência do UX.</p>
+                    </div>
+                    <div class="p-4 rounded-lg" style="border-left: 4px solid var(--color-tan); background-color: var(--color-cream);">
+                        <h4 class="highlight_text text-lg font-bold">Criação de um Cardápio Digital Interativo</h4>
+                        <p class="innovation_detail text-sm mt-1">Este cardápio digital permitirá que os clientes naveguem pelos produtos, vejam detalhes dos itens e façam pedidos de forma intuitiva. Focamos em uma interface simples e visual, ideal para a persona Helena, que busca clareza, e para Leo, que aprecia a facilidade de explorar novos sabores e ingredientes com todas as informações à mão.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer_container py-12 text-center bg-medium-brown text-white">
+        <p class="footer_title text-2xl font-bold mb-2">Mokko Café</p>
+        <p class="footer_quote text-sm opacity-80 max-w-xl mx-auto mb-4">"O conforto cabe numa xícara e também numa boa história de design."</p>
+        <p class="footer_details mt-4 text-xs opacity-60">Projeto de Design | Lari S Corrêa | Contato: <a href="https://www.linkedin.com/in/larissa-guilhermina">meu linkedin</a></p>
+    </footer>
+
+    <script>
+        // JavaScript aprimorado para o resizableFrame (mini-app interativo)
+        const resizableFrame = document.getElementById('resizableFrame');
+        const wireframeContent = document.getElementById('wireframeContent');
+        const currentWidthSpan = document.getElementById('currentWidth');
+        const resizeHandle = resizableFrame.querySelector('.resize-handle');
+
+        let isResizing = false;
+        let startX;
+        let startWidth;
+
+        function updateWireframeLayout() {
+            const currentWidth = resizableFrame.offsetWidth;
+            currentWidthSpan.textContent = currentWidth;
+
+            // Adiciona/remover classes para simular responsividade (mobile vs desktop)
+            if (currentWidth < 500) {
+                wireframeContent.classList.remove('desktop-layout');
+                wireframeContent.classList.add('mobile-layout');
+                // Layout mobile: stack vertical simples
+                wireframeContent.innerHTML = `
+                    <div class="wireframe-header bg-medium-brown text-white p-2 mb-2 rounded"> [LOGO] Mokko | [MENU] </div>
+                    <div class="wireframe-main-area space-y-2">
+                        <div class="wireframe-block bg-light-beige p-2 rounded"> [IMAGEM HERO] </div>
+                        <div class="wireframe-block bg-tan p-2 rounded"> [CTA 1: Nossas Lojas] </div>
+                        <div class="wireframe-block bg-tan p-2 rounded"> [CTA 2: Peça Online] </div>
+                        <div class="wireframe-block bg-light-beige p-2 rounded"> [TEXTO SOBRE: Nossa História] </div>
+                        <div class="wireframe-block bg-green-soft p-2 rounded"> [GALERIA: Fotos Imersivas] </div>
+                    </div>
+                `;
+            } else {
+                wireframeContent.classList.remove('mobile-layout');
+                wireframeContent.classList.add('desktop-layout');
+                // Layout desktop: grid horizontal
+                wireframeContent.innerHTML = `
+                    <div class="wireframe-header bg-medium-brown text-white p-2 mb-2 rounded grid grid-cols-2"> [LOGO] | Home Menu Hist Lojas Contato </div>
+                    <div class="wireframe-main-area grid grid-cols-2 gap-2 h-full">
+                        <div class="wireframe-block bg-light-beige p-2 rounded col-span-2"> [IMAGEM HERO + FILTROS] </div>
+                        <div class="wireframe-block bg-tan p-2 rounded"> [PRODUTO 1] </div>
+                        <div class="wireframe-block bg-tan p-2 rounded"> [PRODUTO 2] </div>
+                        <div class="wireframe-block bg-green-soft p-2 rounded col-span-2"> [GALERIA EXPANDIDA] </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Event listeners para redimensionamento (melhorado com drag)
+        resizeHandle.addEventListener('mousedown', (e) => {
+            isResizing = true;
+            startX = e.clientX;
+            startWidth = resizableFrame.offsetWidth;
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+            e.preventDefault();
+        });
+
+        function onMouseMove(e) {
+            if (!isResizing) return;
+            const newWidth = startWidth + (e.clientX - startX);
+            resizableFrame.style.width = Math.max(200, Math.min(800, newWidth)) + 'px'; // Limites para usabilidade
+            updateWireframeLayout();
+        }
+
+        function onMouseUp() {
+            isResizing = false;
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseup', onMouseUp);
+        }
+
+        // Inicializa ao carregar e observa mudanças de tamanho
+        updateWireframeLayout();
+        const resizeObserver = new ResizeObserver(updateWireframeLayout);
+        resizeObserver.observe(resizableFrame);
+
+        // Responsividade adicional: Ajusta altura em telas pequenas
+        function adjustHeight() {
+            const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+            resizableFrame.style.height = vw < 768 ? '400px' : '500px';
+        }
+        window.addEventListener('resize', adjustHeight);
+        adjustHeight();
+    </script>
+
+</body>
+</html>
