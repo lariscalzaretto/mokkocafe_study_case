@@ -18,8 +18,8 @@ Como podemos projetar um site responsivo que reflita os valores do **Slow Living
 
 | Recurso | Link | Descrição |
 | :--- | :--- | :--- |
-| **Case Study Completo (Esta Página)** | `https://lariscalzaretto.github.io/mokkocafe_study_case/index.html` | A narrativa detalhada do processo de UX Research, UI Design e iterações. |
-| **Protótipo Funcional (Simulação do Site)** | `https://lariscalzaretto.github.io/mokkocafe_study_case/homepage.html` | O resultado final do Front-end (HTML/CSS), demonstrando responsividade e acessibilidade na prática. |
+| **Case Study Completo (Esta Página)** | [Abrir Case Study](https://lariscalzaretto.github.io/mokkocafe_study_case/index.html) | A narrativa detalhada do processo de UX Research, UI Design e iterações. |
+| **Protótipo Funcional (Simulação do Site)** | [Abrir Protótipo Homepage](https://lariscalzaretto.github.io/mokkocafe_study_case/homepage.html) | O resultado final do Front-end (HTML/CSS), demonstrando responsividade e acessibilidade na prática. |
 
 ---
 
